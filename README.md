@@ -1,4 +1,16 @@
-# hello-world-repo
+# hello-godaddy
+
+A simple project that deploy a nodejs app to AWS through CI/CD.
+
+I crafted this small project to show how my skills with
+- GitLab
+- Pulumi
+- Azure
+
+can be easily carried on to 
+- GitHub
+- CloudFormation
+- AWS
 
 Structure of the project:
 ```
