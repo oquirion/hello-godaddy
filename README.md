@@ -14,7 +14,7 @@ can be easily carried on to
 
 Structure of the project:
 ```
-HELLO-WORLD/
+HELLO-GODADDY/
 │
 ├── src/                      # Your main application source code
 │   ├── app.js                # Example entry point for the web app
