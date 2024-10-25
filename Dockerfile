@@ -31,4 +31,4 @@ COPY . .
 EXPOSE 3000
 
 # Step 11: Define the command to run your application
-CMD ["node", "index.js"]
+CMD ["node", "src/app.js"]
