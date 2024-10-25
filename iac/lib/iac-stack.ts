@@ -11,7 +11,9 @@ import { Construct } from 'constructs';
 export class IacStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-      
+    
+    const projectPrefix = "MySimpleApp"
+
     // Create VPC
     const vpc = new ec2.Vpc(this, 'MyVpc');
     
@@ -45,17 +47,17 @@ export class IacStack extends cdk.Stack {
       });
 
       // Create an ECS Task Definition
-      const taskDefinition = new ecs.FargateTaskDefinition(this, 'Hello-World-TaskDef', {
+      const taskDefinition = new ecs.FargateTaskDefinition(this, `${projectPrefix}-TaskDef`, {
         memoryLimitMiB: 512,  // Amount of memory (in MiB)
         cpu: 256,             // vCPU
         executionRole: taskExecutionRole,  // Role for pulling images and managing logs
       });
 
       // Add a container to the task definition
-      const container = taskDefinition.addContainer('Hello-World-Container', {
-        image: ecs.ContainerImage.fromRegistry('775077707318.dkr.ecr.ca-central-1.amazonaws.com/oquirion/test'),  // Your container image
+      const container = taskDefinition.addContainer(`${projectPrefix}-Container`, {
+        image: ecs.ContainerImage.fromRegistry('775077707318.dkr.ecr.ca-central-1.amazonaws.com/oquirion/hello-godaddy'),
         logging: ecs.LogDriver.awsLogs({
-          streamPrefix: 'Hello-World',  // Prefix for the log stream
+          streamPrefix: projectPrefix,  // Prefix for the log stream
           logGroup: logGroup,     // Attach the log group
         }),
         environment: {
