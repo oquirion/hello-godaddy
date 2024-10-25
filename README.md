@@ -34,6 +34,12 @@ HELLO-GODADDY/
 
 ```
 Todos:
-- [ ] Add HealthChech Endpoint.
+- [ ] Add HealthCheck Endpoint.
 - [ ] Remove hardcoded service name from workflow (think of a way to retrieve it from aws)
 - [ ] Review documentation.
+___________
+Here's the link to the [app](http://iacsta-myalb-uebxjf5fhtcu-1741050391.ca-central-1.elb.amazonaws.com/).
+
+I haven't bought a domain yet...
+
+I'm sure we can work it out together ;-)
