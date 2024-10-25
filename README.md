@@ -1,6 +1,7 @@
 # hello-godaddy
 
-A simple project that deploy a nodejs app to AWS through CI/CD.
+### A simple project that deploy a nodejs app to AWS through CI/CD.
+_________
 
 I crafted this small project to show how my skills with
 - GitLab
@@ -11,7 +12,7 @@ can be easily carried on to
 - GitHub
 - CloudFormation
 - AWS
-
+_________
 Structure of the project:
 ```
 HELLO-GODADDY/
@@ -32,3 +33,7 @@ HELLO-GODADDY/
 └── ...
 
 ```
+Todos:
+- [ ] Add HealthChech Endpoint.
+- [ ] Remove hardcoded service name from workflow (think of a way to retrieve it from aws)
+- [ ] Review documentation.
